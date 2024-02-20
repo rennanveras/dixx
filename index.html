@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Carta Lana</title>
+</head>
+
+<body onload="trocarImagem()">
+  <div class="birthdayCard">
+    <div class="cardFront">
+      <div class="area-image">
+        <img id="imagemCarta" src="./src/img/1.jpeg" alt="">
+      </div>
+      <div class="front-text">
+        <h2 class="title-front">Para o eterno amor <br /> da minha vida</h2>
+      </div>
+    </div>
+    <div class="cardInside">
+      <div class="inside-text">
+        <h3 class="happy">Te amo</h3>
+        <h2 class="bday">para</h2>
+        <h3 class="toyou">Sempre!</h3>
+      </div>
+      <div class="wishes">
+        <p>Para: Lana</p>
+        <p>Em cada olhar, vejo a luz de Jesus refletida em ti, iluminando meu caminho e preenchendo meu coração com
+          muito amor.
+          <br />
+          cada segundo com você vale muito mais que qualquer coisa.
+        </p>
+        <p class="name">Beijos, Rennan</p>
+      </div>
+    </div>
+  </div>
+  <button onclick="trocarImagem()">Trocar foto</button>
+  <script>
+    function trocarImagem() {
+      // Gera um número aleatório entre 1 e 4
+      let numeroSorteado = Math.floor(Math.random() * 5) + 1;
+
+      // Concatena o número sorteado com o caminho da imagem
+      let caminhoImagem = "./src/img/" + numeroSorteado + ".jpeg";
+
+      // Atualiza a src da imagem
+      document.getElementById("imagemCarta").src = caminhoImagem;
+    }
+  </script>
+</body>
+
+</html>

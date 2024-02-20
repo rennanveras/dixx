@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(78, 130, 235, 0.6);
+  flex-direction: column;
+}
+
+/*Create the card container*/
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 4s;
+}
+
+
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .15), 0 10px 100px rgba(0, 0, 0, 0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .front-text {
+  display: none;
+}
+
+/*pode remover se quiser deixar o desenho*/
+.birthdayCard:hover .wrap-deco {
+  display: none;
+}
+
+/**********/
+
+.birthdayCard:hover .wrap-decoTwo {
+  display: none;
+}
+
+/*pode remover se quiser deixar o bolo*/
+.teste:hover {
+  display: none;
+}
+
+/**********/
+
+/*Style the front of the card*/
+.cardFront {
+  position: relative;
+  background-color: rgb(255, 246, 246);
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .13), 30px 0 50px rgba(0, 0, 0, 0.1);
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.area-image {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.area-image img {
+  width: 90%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin-top: 20px;
+}
+
+.title-front {
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+button {
+  display: block;
+  margin-top: 30px;
+  border: 2px solid rgb(149, 27, 197);
+  background-color: #ecc7f6;
+  border-radius: 5px;
+  padding: 10px 6px;
+  cursor: pointer;
+}
+
+.happy,
+.toyou {
+  position: relative;
+  font-family: didot;
+  text-align: center;
+  backface-visibility: hidden;
+  font-size: 30px;
+}
+
+.happy {
+  top: 198px;
+}
+
+.toyou {
+  top: 123px;
+}
+
+.bday {
+  position: relative;
+  font-family: arial;
+  font-size: 30px;
+  text-align: center;
+  top: 163px;
+  font-family: didot;
+}
+
+.wrap-deco {
+  position: absolute;
+  top: -230px;
+  left: -200px;
+}
+
+.decorations {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+
+/*Style the inside part of the card*/
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+.inside-text {
+  position: relative;
+  top: -160px;
+  transform: scale(0.7);
+}
+
+.wishes {
+  position: relative;
+  top: -100px;
+  margin: 25px;
+}
+
+p {
+  font-family: 'Brush Script MT';
+  color: #333;
+}
+
+.name {
+  margin-left: 100px;
+}
